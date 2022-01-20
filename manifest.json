@@ -1,0 +1,34 @@
+{
+	"name": "CeFi Currency Converter",
+	"description": "Gives a Canadian dollar option to Celsius and Nexo, which only give values in USD out of the box.",
+	"version": "1.0",
+	"manifest_version": 3,
+	"permissions": ["storage", "activeTab", "scripting"],
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "/images/dollar-16x.png",
+			"32": "/images/dollar-32x.png",
+			"48": "/images/dollar-48x.png",
+			"128": "/images/dollar-128x.png"
+		}
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://app.celsius.network/",
+				"https://app.celsius.network/transactions",
+				"https://app.celsius.network/send",
+				"https://app.celsius.network/receive",
+				"https://platform.nexo.io/"
+			],
+			"js": ["content.js", "revert.js"]
+		}
+	],
+	"icons": {
+		"16": "/images/dollar-16x.png",
+		"32": "/images/dollar-32x.png",
+		"48": "/images/dollar-48x.png",
+		"128": "/images/dollar-128x.png"
+	}
+}
