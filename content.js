@@ -1,6 +1,6 @@
 const getData = async () => {
 	const response = await fetch(
-		`https://openexchangerates.org/api/latest.json?app_id=${API_KEY}`
+		`https://openexchangerates.org/api/latest.json?app_id=${API_KEY}` // API used is Open Exchange Rates
 	);
 	const data = await response.json();
 	chrome.storage.sync.set({ currency: data.rates.CAD });
@@ -17,6 +17,7 @@ const getAllText = () => {
 	return nodes;
 };
 const commaErase = () => {
+	// For Celsius - gets rid of commas for the conversion
 	getAllText().forEach((node) => {
 		const { nodeValue } = node;
 		const newValue = nodeValue.replace(/(?<=\d),(?=\d)/g, "");
