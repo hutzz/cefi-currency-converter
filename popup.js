@@ -27,14 +27,6 @@ document.getElementById("cad").addEventListener("click", async () => {
 		files: ["content.js"],
 	});
 });
-document.getElementById("cad").addEventListener("click", async () => {
-	let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-	clicked = true;
-	chrome.scripting.executeScript({
-		target: { tabId: tab.id },
-		files: ["content.js"],
-	});
-});
 document.getElementById("help").addEventListener("click", async () => {
 	let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 	const help = () => {
