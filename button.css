@@ -1,5 +1,5 @@
 body {
-	background-color: rgb(20, 24, 68);
+	background-color: rgb(55, 62, 122);
 }
 button {
 	width: 60px;
@@ -7,5 +7,7 @@ button {
 	outline: none;
 	border-radius: 15px 15px;
 	margin-bottom: 2px;
-	background-color: white;
+	background-color: rgb(20, 24, 68);
+	color: white;
+	font-weight: bold;
 }
