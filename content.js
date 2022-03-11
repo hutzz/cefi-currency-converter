@@ -1,6 +1,6 @@
 const getData = async () => {
 	const response = await fetch(
-		`https://openexchangerates.org/api/latest.json?app_id=1ac5070366b5421996b168b115f43f25` // API used is Open Exchange Rates
+		`https://openexchangerates.org/api/latest.json?app_id=${API_KEY}` // API used is Open Exchange Rates
 	);
 	const data = await response.json();
 	chrome.storage.sync.set({ currency: data.rates.CAD });
