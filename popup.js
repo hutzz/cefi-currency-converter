@@ -20,3 +20,6 @@ document.getElementById("cad").addEventListener("click", async () => {
 		files: ["content.js"],
 	});
 });
+document.getElementById("reload").addEventListener("click", () => {
+	chrome.runtime.reload();
+});
